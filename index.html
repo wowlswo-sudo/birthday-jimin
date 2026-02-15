@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지민아 생일 축하해♡ ! 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #FFFF99 0%, #FFFF66 50%, #FFEB3B 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow-x: hidden;
+            animation: bgGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes bgGlow {
+            0% { filter: brightness(1.05); }
+            100% { filter: brightness(1.15); }
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(255,105,180,0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 10;
+            border: 4px solid #FFD700;
+        }
+        
+        h1 {
+            font-size: 4em;
+            color: #FF69B4;
+            text-shadow: 3px 3px 6px rgba(255,215,0,0.5);
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        .message {
+            font-size: 1.4em;
+            line-height: 1.6;
+            margin: 30px 0;
+            color: #FF69B4;
+            font-weight: 600;
+        }
+        
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .photo {
+            width: 500px;
+            height: 500px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 10px solid #FFD700;
+            box-shadow: 0 15px 30px rgba(255,215,0,0.6);
+            transition: transform 0.3s ease;
+        }
+        
+        .photo:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+        
+        .letter {
+            background: linear-gradient(135deg, #FFF9C4, #FFFACD);
+            padding: 35px;
+            border-radius: 25px;
+            margin: 30px 0;
+            border: 4px solid #FFD700;
+            font-size: 1.3em;
+            color: #555;
+            line-height: 1.8;
+            box-shadow: 0 10px 25px rgba(255,215,0,0.4);
+        }
+        
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart {
+            position: absolute;
+            color: #FF69B4;
+            font-size: 25px;
+            animation: floatHeart 4s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes floatHeart {
+            0% { 
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% { 
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .star {
+            position: absolute;
+            color: #FFD700;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            .photo { width: 90%; height: auto; }
+        }
+        
+        .music-note {
+            font-size: 3em;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .heart-deco {
+            font-size: 2.5em;
+            display: inline-block;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            margin: 0 10px;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="hearts" id="hearts"></div>
+    
+    <div class="container">
+        <h1>💛 지민아 생일 축하해 💛</h1>
+        
+        <div class="heart-deco">💕💖💕</div>
+        
+        <p class="message">
+            올해는 더 건강하고 더 밝은 모습으로 노란 햇살 같은 행복이 가득하길! 💛✨<br>
+         
+        </p>
+        
+        <div class="heart-deco">💗💝💗</div>
+        
+        <div class="photo-gallery">
+            <img src="photo1.png" alt="우리 추억1" class="photo"> 
+        </div>
+
+        <div class="heart-deco">💓💞💓</div>
+        
+        <div class="letter">
+            📝 <strong style="color: #FF69B4;">너에게 보내는 편지 💌</strong><br><br>
+            추운 겨울 동안 힘든 치료 받느라 많이 힘들었지? <br>
+            이제 점점 수치도 좋아지고 컨디션도 점점 더 좋아질거라 믿어!<br>
+            내년 생일에는 더 좋아진 컨디션으로 더 좋은곳에서 더 맛있는거 먹자💛 <br>사랑하고 항상 응원해!💕 <br>
+        </div>
+        
+    
+        </p>
+        
+        <div class="heart-deco">💖💕💗💝💓💞💖</div>
+    </div>
+    
+    <script>
+        // 별 애니메이션
+        function createStar() {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.innerHTML = '✨';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('stars').appendChild(star);
+            
+            setTimeout(() => {
+                star.remove();
+            }, 4000);
+        }
+        
+        // 하트 애니메이션
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            const hearts = ['💕', '💖', '💗', '💝', '💓', '💞'];
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }
+        
+        setInterval(createStar, 400);
+        setInterval(createHeart, 800);
+    </script>
+</body>
+</html>
